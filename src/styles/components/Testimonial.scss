@@ -1,0 +1,76 @@
+@import "../utils/Colors.scss";
+
+.testimonial-container {
+  .quote {
+    position: relative;
+    span {
+      position: absolute;
+      font-size: 5rem;
+      color: #f32a8f8f;
+    }
+  }
+  height: 16rem;
+  width: 95%;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    box-shadow: rgba(99, 15, 179, 0.5) 5px 5px, rgba(99, 15, 179, 0.3) 10px 10px,
+      rgba(99, 15, 179, 0.1) 15px 15px;
+  }
+  .content {
+    color: $lightFontColor;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  .author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: rgb(99, 15, 179);
+    .name {
+      font-size: larger;
+      font-weight: bold;
+    }
+    .designation {
+      font-size: medium;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .testimonial-container {
+    .content {
+      font-size: 1.3rem;
+    }
+    .author {
+      .name {
+        font-size: large;
+      }
+      .designation {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .testimonial-container {
+    .content {
+      font-size: 1.2rem;
+    }
+    .author {
+      .name {
+        font-size: medium;
+      }
+      .designation {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../utils/Colors.scss";
+
+.blog-container {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    box-shadow: #f32a8f2f 5px 5px, #f32a8f1e 10px 10px, #f32a8f02 15px 15px;
+  }
+  .image {
+    height: 12rem;
+    img {
+      height: 12rem;
+      width: 100%;
+    }
+  }
+  .content {
+    padding: 1rem;
+    .title {
+      h3 {
+        color: $headingColor;
+      }
+    }
+    .subTitle {
+      p {
+        color: $lightFontColor;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .blog-container {
+    .image {
+      height: 20rem;
+      img {
+        height: 20rem;
+      }
+    }
+
+    .content {
+      padding: 2rem;
+      .title {
+        h3 {
+          font-size: 3rem;
+        }
+      }
+      .subTitle {
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

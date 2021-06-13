@@ -1,0 +1,21 @@
+@import "../utils/Colors.scss";
+
+.brand {
+  cursor: pointer;
+  span {
+    text-transform: uppercase;
+    font-size: xx-large;
+    border: 0.1rem solid #f50460;
+    padding: 0.6rem 1rem;
+    border-radius: 0.3rem;
+    color: $blueColor;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+  }
+}
+.footer {
+  span {
+    color: white;
+    border-color: white;
+  }
+}

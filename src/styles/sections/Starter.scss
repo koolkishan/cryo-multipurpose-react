@@ -1,0 +1,88 @@
+@import "../utils/Colors.scss";
+.main-container {
+  // margin: 0 10rem;
+  margin: 0 10%;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .content {
+      margin-top: 3.4rem;
+      margin-right: 3rem;
+      h1 {
+        font-size: 3rem;
+        color: $headingColor;
+      }
+      p {
+        font-size: 1.4rem;
+        color: $lightFontColor;
+        line-height: 1.9rem;
+      }
+      .button-container {
+        display: flex;
+        button {
+          margin-right: 1rem;
+        }
+      }
+    }
+    .image {
+      img {
+        height: 35rem;
+        width: 35rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .main-container {
+    .container {
+      grid-template-columns: 1fr;
+      .content {
+        margin-right: 0;
+        h1 {
+          font-size: 4rem;
+        }
+        p {
+          font-size: 2rem;
+          line-height: 2.5rem;
+        }
+      }
+      .image {
+        margin-left: 2rem;
+        img {
+          height: 25rem;
+          width: 25rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .main-container {
+    padding-bottom: 3rem;
+    .container {
+      .content {
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+          line-height: 1.4rem;
+        }
+      }
+      .image {
+        img {
+          height: 30rem;
+          width: 30rem;
+        }
+      }
+    }
+  }
+}

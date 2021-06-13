@@ -1,0 +1,26 @@
+@import "../utils/Colors.scss";
+.title {
+  margin-bottom: 2rem;
+  h2 {
+    margin-bottom: 0.7rem;
+    font-size: xx-large;
+    color: $headingColor;
+  }
+  div {
+    height: 0.3rem;
+    width: 3rem;
+    border-radius: 0.1rem;
+  }
+  div .blue {
+    background-color: $headingColor;
+  }
+  div .pink {
+    background-color: $pinkColor;
+  }
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

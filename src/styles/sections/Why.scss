@@ -1,0 +1,134 @@
+@import "../utils/Colors.scss";
+
+.why-container {
+  min-height: 50vh;
+  .container {
+    margin: 0 10%;
+    padding: 5rem 0;
+    .top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .title {
+        margin-bottom: 1rem;
+      }
+      .subTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          width: 65%;
+          text-align: center;
+          color: $lightFontColor;
+        }
+      }
+    }
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 1rem;
+      .reasons {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        ul {
+          width: 80%;
+          list-style-type: none;
+
+          li {
+            color: $lightFontColor;
+            margin-bottom: 1.5rem;
+            padding-left: 45px;
+
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              top: -4px;
+              left: 0;
+              width: 24px;
+              height: 24px;
+              background-image: url("../../assets/check-circle.svg");
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+      .video {
+        height: 18rem;
+        width: 100%;
+        background-image: url("../../assets/videoImage.jpg");
+        background-size: cover;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          color: white;
+          font-size: 7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .why-container {
+    .container {
+      .top {
+        .subTitle {
+          p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .content {
+        grid-template-columns: 1fr;
+        .reasons {
+          ul {
+            li {
+              margin-bottom: 3rem;
+              font-size: 1.7rem;
+              &::before {
+                top: 0px;
+              }
+            }
+          }
+        }
+        .video {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .why-container {
+    .container {
+      .top {
+        .subTitle {
+          p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .content {
+        .reasons {
+          ul {
+            li {
+              margin-bottom: 3rem;
+              font-size: 1.7rem;
+              &::before {
+                top: 0px;
+              }
+            }
+          }
+        }
+        .video {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

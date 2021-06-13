@@ -1,0 +1,82 @@
+@import "../utils/Colors.scss";
+.navbar {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  .col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .collapseble-button {
+      display: none;
+    }
+  }
+  nav {
+    .links {
+      ul {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: center;
+        margin: 0.3rem 2rem;
+        color: $lightFontColor;
+        li {
+          a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: $blueColor;
+            &:hover {
+              color: $buttonPinkColor;
+            }
+            &:focus {
+              color: $blueColor;
+            }
+            &:active {
+              color: $blueColor;
+            }
+          }
+          text-transform: uppercase;
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .navbar.active {
+    nav {
+      display: block;
+    }
+  }
+
+  .navbar {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .col {
+      .collapseble-button {
+        display: block;
+        font-size: 4rem;
+      }
+    }
+    nav {
+      display: none;
+      .links {
+        ul {
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 0.3rem 0rem;
+          li {
+            margin: 2rem 0 0 0;
+            &:first-of-type {
+              margin-top: 4rem;
+            }
+            a {
+              font-size: x-large;
+            }
+          }
+        }
+      }
+    }
+  }
+}

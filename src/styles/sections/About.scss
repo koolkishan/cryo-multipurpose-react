@@ -1,0 +1,69 @@
+@import "../utils/Colors.scss";
+.about-container {
+  background-color: #efe8ff;
+  .container {
+    margin: 0 10%;
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    .details {
+      p {
+        color: $lightFontColor;
+        line-height: 1.3rem;
+        font-size: large;
+        text-align: justify;
+        width: 90%;
+      }
+      button {
+        margin-top: 3rem;
+      }
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .about-container {
+    .container {
+      grid-template-columns: 1fr;
+      .details {
+        p {
+          font-size: 2.3rem;
+          line-height: 2rem;
+          width: 100%;
+        }
+      }
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .about-container {
+    .container {
+      .details {
+        p {
+          font-size: 1.8rem;
+          line-height: 1.7rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .about-container {
+    .container {
+      gap: 1rem;
+      .cards {
+        gap: 1rem;
+      }
+    }
+  }
+}

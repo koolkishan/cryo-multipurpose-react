@@ -1,0 +1,78 @@
+@import "../utils/Colors.scss";
+button {
+  color: white;
+  text-transform: uppercase;
+  padding: 0.8rem 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.25rem;
+  font-weight: bolder;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-in-out;
+
+  svg {
+    margin-left: 0.5rem;
+    font-size: large;
+  }
+}
+.blue {
+  background-color: $buttonBlueColor;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    background-color: white;
+    border: 0.1rem solid $buttonBlueColor;
+    color: $buttonBlueColor;
+  }
+}
+
+.pink {
+  background-color: $buttonPinkColor;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    background-color: white;
+    border: 0.1rem solid $buttonPinkColor;
+    color: $buttonPinkColor;
+  }
+}
+
+.inverse {
+  background-color: white;
+  color: $buttonPinkColor;
+  border: $buttonPinkColor 0.1rem solid;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    background-color: $buttonPinkColor;
+    border: 0.1rem solid transparent;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  button {
+    font-size: 1.5rem;
+    padding: 1.5rem 1.5rem;
+    svg {
+      font-size: small;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  button {
+    font-size: 1.3rem;
+    padding: 1.5rem 1.5rem;
+    svg {
+      font-size: small;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  button {
+    font-size: 0.7rem;
+    padding: 0.8rem;
+    white-space: nowrap;
+  }
+}
